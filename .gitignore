@@ -1,0 +1,9 @@
+# Repository-wide local configuration and secrets.
+# Frontend/Python build rules live in their respective directories.
+.env
+.env.*
+!.env.example
+*.log
+.idea/
+.DS_Store
+Thumbs.db
