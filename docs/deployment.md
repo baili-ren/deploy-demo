@@ -282,3 +282,11 @@
 - 根目录 .gitignore 保留通用本地配置、日志、编辑器和系统文件规则；技术栈规则分别归前后端目录。少量公共规则在子目录重复是为了支持独立拆分。
 - 已用 git check-ignore 验证 .idea、后端 .env/.venv/__pycache__、前端 .env/node_modules/dist 均被对应规则忽略；当前暂存列表不包含 .idea。
 - 修改尚未重新暂存；由用户执行 git add .、检查暂存列表、提交和关联远程仓库。助手未提交或推送。
+
+### 2026-11-07：GitHub 首次推送完成，进入部署交接
+
+- 用户确认已成功推送至 https://github.com/baili-ren/deploy-demo.git。此为用户验证，助手未独立访问远程核对提交。
+- 已完成范围：本地前后端业务闭环、PostgreSQL 迁移与持久化验证、前端生产构建、容器部署配置准备、GitHub 首次推送。
+- 未完成范围：目标环境 Compose 配置校验、Docker 镜像构建、数据库容器初始化与迁移、Nginx 容器运行、公网访问及容器重建/服务器重启后数据保留、备份恢复、更新与回滚。
+- 部署交接入口为 docs/container-deployment.md；继续前先确认服务器部署目录及私有仓库（若适用）的读取方式。所有云服务器关键操作仍由用户执行，助手不连接云服务器。
+- 可继续当前对话，也可在新对话要求先阅读 docs/deployment.md 与 docs/container-deployment.md。本条记录在用户已推送后追加，尚未随首次推送上传；换设备或从 GitHub 承接前需用户补提交并推送。
